@@ -83,20 +83,11 @@ function Skills() {
                 onChange={(e) => handleChange(index, 'name', e.target.value)}
               />
             </div>
-            {isEditing ? (
-              <Rating
+            <Rating
                 style={{ maxWidth: 120 }}
                 value={item.rating}
                 onChange={(v) => handleChange(index, 'rating', v)}
               />
-            ) : (
-              <div className="relative bg-gray-300 rounded-lg h-2">
-                <div
-                  className="absolute bg-primary h-2 rounded-lg"
-                  style={{ width: `${item.rating * 20}%` }}
-                ></div>
-              </div>
-            )}
           </div>
           
         ))}
